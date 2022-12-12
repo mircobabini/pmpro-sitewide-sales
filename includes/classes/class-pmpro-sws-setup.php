@@ -179,8 +179,10 @@ class PMPro_SWS_Setup {
 			$new_links = array(
 				'<a href="' . get_admin_url( null, 'edit.php?post_type=pmpro_sitewide_sale' ) . '">' . __( 'View Sitewide Sales', 'pmpro-sitewide-sales' ) . '</a>',
 			);
+			
+			$links = array_merge( $new_links, $links );
 		}
-		return array_merge( $new_links, $links );
+		return $links;
 	}
 
 	/**
